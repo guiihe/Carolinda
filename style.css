@@ -1,0 +1,221 @@
+/* Estilos gerais para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+/* Estilos para o cabeçalho */
+header {
+    background-color: #ff66b2;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column; /* Torna o conteúdo do cabeçalho empilhado em dispositivos móveis */
+    align-items: center; /* Centraliza horizontalmente */
+    text-align: center; 
+}
+
+/* Container para o logotipo e o nome */
+.logo-nome {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+/* Estilos para o logotipo */
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+    border-radius: 50%; /* Deixa o logotipo redondo */
+}
+
+/* Estilos para o título no cabeçalho */
+header h1 {
+    margin: 0;
+}
+
+/* Estilos para a lista de navegação */
+nav ul {
+    list-style: none; /* Remove os marcadores da lista */
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+/* Estilos para os itens da lista de navegação */
+nav ul li {
+    margin: 0 1rem ;
+}
+
+/* Estilos para os links de navegação */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Estilos para os links de contato */
+.contato a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Estilos para seções de introdução, sobre e contato */
+.intro, .sobre, .contato {
+    background-color: #0ec4ba;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Estilos para a seção de produtos */
+.produtos {
+    padding: 2rem;
+    text-align: center;
+    color: white;
+}
+
+/* Estilos para os títulos nas seções sobre e contato */
+.sobre h2, .contato h2 {
+    color: #ff66b2;
+}
+
+/* Estilos para o título na seção de produtos */
+.produtos h2 {
+    color: #0ec4ba;
+}
+
+/* Estilos para cada produto individual */
+.produto {
+    display: inline-block;
+    margin: 1rem;
+    width: calc(33.333% - 2rem); /* Ajusta a largura dos produtos para caber três por linha */
+    border: 1px solid #ccc;
+    background-color: #ff66b2;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+/* Estilos para as imagens dos produtos */
+.produto img {
+    width: 100%;
+    max-height: 500px; 
+    object-fit: cover; /* Mantém a proporção da imagem */
+    background-color: #f2f2f2;
+    border-radius: 10px;
+}
+
+/* Estilos para o rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+/* Estilos para o carrossel de imagens */
+.carousel {
+    width: 100%;
+    max-width: 600px; 
+    margin: 0 auto; /* Centraliza o carrossel horizontalmente */
+    overflow: hidden;
+    position: relative;
+}
+
+/* Container para as imagens do carrossel */
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Estilos para cada slide do carrossel */
+.carousel-slide {
+    min-width: 100%; 
+    box-sizing: border-box;
+}
+
+/* Estilos para as imagens dentro dos slides do carrossel */
+.carousel-slide img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Estilos para os botões do carrossel */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    background-color: #ff66b2;
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+/* Posição do botão "anterior" do carrossel */
+.prev {
+    left: 10px;
+}
+
+/* Posição do botão "próximo" do carrossel */
+.next {
+    right: 10px;
+}
+
+/* Estilos para o botão de voltar ao topo */
+#botao {
+    position: fixed;
+    padding: 15px;
+    bottom: 20px;
+    right: 30px;
+    border: none;
+    background-color: #1a1a1a;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+/* Estilos de hover para o botão de voltar ao topo */
+#botao:hover {
+    background-color: grey;
+}
+
+/* Media Queries para dispositivos móveis */
+@media (max-width: 600px) {
+    /* Ajustes no cabeçalho para dispositivos móveis */
+    header {
+        padding: 1rem;
+    }
+
+    /* Ajustes na seção de produtos para dispositivos móveis */
+    .produtos {
+        padding: 1rem;
+    }
+
+    /* Ajustes no container de produtos para dispositivos móveis */
+    .produtos {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centraliza os produtos horizontalmente */
+    }
+
+    /* Ajustes nos produtos individuais para dispositivos móveis */
+    .produto {
+        width: 100%; /* Produtos ocupam 100% da largura */
+        max-width: 90%; /* Define um limite de largura para os produtos */
+        margin: 1rem 0; /* Ajusta a margem para centralizar os produtos */
+    }
+
+    /* Ajustes nos botões do carrossel para dispositivos móveis */
+    .carousel-btn {
+        padding: 1rem 0.5rem; /* Reduz o padding dos botões */
+    }
+}
+
